@@ -4,6 +4,8 @@
  *   LDAP PHP Change Password Webpage
  *   @author:   Matt Rude <http://mattrude.com>
  *   @website:  http://technology.mattrude.com/2010/11/ldap-php-change-password-webpage/
+ *   
+ *   Edited and updated by: Adrian Thompson <http://www.successos.com/>
  *
  *
  *              GNU GENERAL PUBLIC LICENSE
