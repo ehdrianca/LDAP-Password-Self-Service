@@ -24,8 +24,8 @@ function changePassword($user,$oldPassword,$newPassword,$newPasswordCnf){
   global $message;
   global $message_css;
  
-  $server = "10.251.1.5";
-  $dn = "dc=successos,dc=com";
+  $server = "myServer";
+  $dn = "dc=example,dc=com";
     
   error_reporting(0);
   ldap_connect($server);
@@ -113,7 +113,8 @@ password.";
   if ($samba) {
     $entry["sambaNTPassword"] = strtoupper(hash("md4", iconv("UTF-8","UTF-16LE",$newPassword)));
     $entry["sambaLMPassword"] = strtoupper(hash("md4", iconv("UTF-8","UTF-16LE",$newPassword)));
-    $entry["sambaPwdLastSet"] = time(); //why it doesn't work?
+    $entry["sambaPwdLastSet"] = time();
+    // Disabled for now....
     $entry["sambaPasswordHistory"] = "0000000000000000000000000000000000000000000000000000000000000000";
     //array_push($entry["sambaPasswordHistory"], $entry["sambaNTPassword"]);
   }
